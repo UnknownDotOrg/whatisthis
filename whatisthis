@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -r /etc/os-release ]]; then
+    . /etc/os-release
+    printf 'You are running %s!\n' "${PRETTY_NAME:-an unknown Linux distribution}"
+else
+    printf 'You are running %s!\n' "$(uname -s)"
+fi
